@@ -10,7 +10,6 @@ var varObj = [{
     },
 ]
 var template = document.querySelector('template');
-var pattern = /\{\{.*?\}\}/gi;
 
 function renderVar(tpl, obj) {
     var html = tpl.innerHTML;
@@ -20,7 +19,6 @@ function renderVar(tpl, obj) {
             html = html.replace('{{' + key + '}}', element)
         }
     }
-
     return html;
 };
 for (let i = 0; i < varObj.length; i++) {
